@@ -1,0 +1,1 @@
+VIRTUAL TABLE "ECAR.ecardb::ecar.battery_vora" AT "ECARVORA"."voraodbc"."VORA"."BATTERY"

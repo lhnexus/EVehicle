@@ -1,0 +1,1 @@
+VIEW "ECAR.ecardb.calview::ecar.vehicle_vora_view" AS SELECT TOP 100 * FROM "ECAR.ecardb::ecar.vehicle_vora"

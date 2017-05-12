@@ -1,0 +1,18 @@
+{
+	"ECAR.ecardb::ecar.vehicle_vora" : {
+		"target" : {
+			"remote" : "ECARVORA",
+			"database" : "voraodbc",
+			"schema" : "VORA",
+			"object" : "VEHICLE"
+		}
+	},
+	"ECAR.ecardb::ecar.battery_vora" : {
+		"target" : {
+			"remote" : "ECARVORA",
+			"database" : "voraodbc",
+			"schema" : "VORA",
+			"object" : "BATTERY"
+		}
+	}
+}
