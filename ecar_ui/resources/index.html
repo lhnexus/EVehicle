@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+<style>
+html, body {
+    height: 100%;
+}
+
+.chart-field{
+	width: 50%;
+	float: left
+} 
+
+#map{
+	height:60%; 
+	border-top:0.25rem solid #009de0
+}
+
+#reportList{
+	border-top:0.25rem solid #009de0
+}
+
+.gm-style-iw {
+	width: 350px !important;
+	top: 15px !important;
+	left: 0px !important;
+	background-color: #fff;
+	box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+	border: 1px solid rgba(72, 181, 233, 0.6);
+	border-radius: 2px 2px 10px 10px;
+}
+#iw-container {
+	margin-bottom: 10px;
+}
+#iw-container .iw-title {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 25px;
+	font-weight: 400;
+	padding: 10px;
+	background-color: #48b5e9;
+	color: white;
+	margin: 0;
+	border-radius: 2px 2px 0 0;
+}
+#iw-container .iw-content {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: 400;
+	margin-right: 1px;
+	padding: 15px 5px 20px 10px;
+	max-height: 140px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.iw-media{
+	float: right;
+	width: 135px;
+}
+
+.iw-media img {
+	float: right;
+	margin: 5px 0 5px 10px;
+    width: 135px;
+}
+
+.iw-media button{
+	background: #48b5e9 none repeat scroll 0 0;
+    border: 7px solid #48b5e9;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #3990b9;
+    color: white;
+    font-family: "Open Sans Condensed",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 22px 0 0;
+    padding: 0 19px;
+}
+
+.iw-content > table{
+	width: 180px;
+}
+
+.iw-subTitle {
+	font-size: 16px;
+	font-weight: 700;
+	padding: 5px 0;
+}
+.iw-bottom-gradient {
+	position: absolute;
+	width: 326px;
+	height: 25px;
+	bottom: 10px;
+	right: 18px;
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+}
+</style>
+<title>ECar Monitor Center</title>
+<!-- 1.) Load SAPUI5 (from a remote server), select theme and control library -->
+<script src="/sapui5/sap-ui-core.js"
+	id="sap-ui-bootstrap" data-sap-ui-libs="sap.m, sap.ui.commons, sap.ui.table"
+	data-sap-ui-theme="sap_bluecrystal" data-sap-ui-xx-bindingSyntax="complex">
+</script>
+<!-- 2.) Create a UI5 button and place it onto the page -->
+<script type="text/javascript">
+</script>
+</head>
+<body class="sapUiBody sapUiSizeCozy">
+	<!-- This is where you place the UI5 button -->
+	<div id="Shell" data-sap-ui="Shell" class="sapMShell sapMShellAppWidthLimited" style="height:100%">
+		<div class="sapMShellCentralBox" style="height:100%">
+			<div id='content' style="height:100%">
+				<!--<div id="chartField" style="height:1160px">-->
+				<div id="chartField" style="height:100%">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	sap.ui.localResources("Panels");
+	var app = new sap.m.App({initialPage:"Panels_Charts"});
+	sap.ui.getCore().AppContext = new Object();
+	sap.ui.getCore().AppContext.App = app;
+	var page = sap.ui.view({
+		id:"Panels_Charts",
+		viewName:"Panels.Charts",
+		type:sap.ui.core.mvc.ViewType.XML
+	});
+	app.addPage(page);
+	app.placeAt("chartField");
+	</script>
+</body>
+</html>

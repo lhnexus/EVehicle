@@ -1,0 +1,23 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Panels.Charts"
+	xmlns:viz="sap.viz.ui5.controls" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="EBattery Asset Health Control Center" width="100%">
+		<Panel headerText="2D Chart" expandable="true" expanded="true">
+			<content>
+				<mvc:XMLView id="status_chart" viewName="Panels.statuschart.statusChart" height="530px" width="50%"/>
+				<mvc:XMLView id="region_chart" viewName="Panels.regionchart.regionChart" height="530px" width="50%"/>
+				<mvc:XMLView id="service_chart" viewName="Panels.servicechart.serviceChart" height="530px" width="50%"/>
+				<mvc:XMLView id="audit_chart" viewName="Panels.auditchart.auditChart" height="530px" width="50%"/>
+			</content>
+		</Panel>
+		<Panel headerText="Map" expandable="true" expanded="true">
+			<content>
+				<mvc:XMLView viewName="Panels.Map.Map" height="1500px"/>
+			</content>
+		</Panel>
+		<Panel headerText="Reports" expandable="true" expanded="true">
+			<content>
+				<mvc:XMLView viewName="Panels.Reports.Reports" height="600px"/>
+			</content>
+		</Panel>
+	</Page>
+</core:View>
